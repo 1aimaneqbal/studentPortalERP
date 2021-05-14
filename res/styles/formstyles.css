@@ -1,0 +1,146 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(
+    120deg,
+    rgba(87, 0, 120, 1) 0%,
+    rgba(45, 0, 102, 1) 100%
+  );
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100%;
+}
+nav {
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav a {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+}
+.textcontainer h2 {
+  padding: 0rem 1rem;
+}
+.container {
+  width: 400px;
+  background: rgba(238, 238, 238, 0.2);
+  backdrop-filter: blur(2px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  box-shadow: 0 0 25px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+.container h2 {
+  text-align: center;
+  color: #fff;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+.container .inputBox {
+  position: relative;
+  margin-bottom: 20px;
+}
+.inputBox input {
+  width: 100%;
+  font-size: 16px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #2d0066;
+  color: #fff;
+  padding: 10px;
+  outline: none;
+}
+.inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  transition: 0.5s;
+  font-size: 16px;
+  pointer-events: none;
+  padding: 10px;
+}
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label {
+  top: -17.5px;
+  color: #200042;
+  font-size: 12px;
+  border: none;
+}
+.container input[type="submit"] {
+  border: none;
+  background-color: #2d0066;
+  width: 100%;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+.radioBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.selBox {
+  width: 100%;
+  margin-bottom: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.selBox select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.selBox select:focus,
+.selBox select:hover {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.selBox select option {
+  color: #200042;
+}
+h4 {
+  width: 100%;
+  text-align: center;
+  color: rgb(192, 192, 192);
+  padding-top: 2rem;
+  font-size: 0.95rem;
+}
+h4 a {
+  color: #2d0066;
+}
+@media screen and (max-width: 1300px) {
+  .inputBox input {
+    color: rgb(192, 192, 192);
+  }
+  .inputBox label {
+    color: rgb(192, 192, 192);
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 2rem;
+  }
+}
